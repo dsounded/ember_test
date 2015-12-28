@@ -1,0 +1,11 @@
+<h1>Friends Index</h1>
+<ul>
+{{#if model.length}}
+  Total amount of friends: {{model.length}}
+{{else}}
+  There is no foriends at all.
+{{/if}}
+<hr>
+  {{#each model as |friend|}} <li>{{friend.firstName}} {{friend.lastName}}</li>
+  {{/each}}
+</ul>
