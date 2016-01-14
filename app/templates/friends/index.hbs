@@ -3,12 +3,12 @@
 {{#if model.length}}
   Total amount of friends: {{model.length}}
 {{else}}
-  There is no foriends at all.
+  There is no friends at all.
 {{/if}}
 <hr>
   {{#each model as |friend|}}
     <li>
-      {{#link-to 'friends.show' friend}}
+      {{link-to friend.fullName 'friends.show' friend}}
     </li>
   {{/each}}
 </ul>
