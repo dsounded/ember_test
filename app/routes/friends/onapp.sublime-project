@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/private/var/www/interface"
+		},
+		{
+			"path": "/private/var/www/rails"
 		}
 	]
 }
