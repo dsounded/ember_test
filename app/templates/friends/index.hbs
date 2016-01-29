@@ -4,6 +4,7 @@
       <th>Name</th>
       <th>Articles</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +12,11 @@
       <tr>
         <td>{{link-to friend.fullName "friends.show" friend}}</td>
         <td>{{friend.totalArticles}}</td>
+        <td>
+          {{#link-to "articles" friend}}
+            Articles
+          {{/link-to}}
+        </td>
         <td><a href="#" {{action "delete" friend}}>delete</a></td>
       </tr>
     {{/each}}
