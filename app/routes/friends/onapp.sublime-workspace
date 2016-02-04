@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"da",
+				"data_store"
+			],
+			[
+				"safe_li",
+				"safe_link_to"
+			],
+			[
+				"networ",
+				"network_interface"
+			],
+			[
+				"vi",
+				"virtual_machine"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"o",
+				"options"
+			],
+			[
+				"billing_",
+				"billing_resources"
+			],
+			[
+				"depe",
+				"deprecated_resources"
+			],
+			[
+				"base",
+				"base_resource"
+			],
+			[
+				"use",
+				"use_serializer"
+			],
+			[
 				"taer",
 				"target_id"
 			],
@@ -180,50 +220,10 @@
 	"buffers":
 	[
 		{
-			"file": "/private/var/www/interface/spec/factories/billing/resource.rb",
-			"settings":
-			{
-				"buffer_size": 3267,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/private/var/www/interface/spec/controllers/billing/user/resources_controller_spec.rb",
-			"settings":
-			{
-				"buffer_size": 9440,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/private/var/www/interface/app/controllers/billing/user/resources_controller.rb",
 			"settings":
 			{
 				"buffer_size": 5355,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/private/var/www/interface/app/services/billing/user/resource/proxy.rb",
-			"settings":
-			{
-				"buffer_size": 3134,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/private/var/www/interface/spec/services/billing/user/resource/proxy_spec.rb",
-			"settings":
-			{
-				"buffer_size": 4059,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/private/var/www/interface/app/models/billing/user/resource/base.rb",
-			"settings":
-			{
-				"buffer_size": 3129,
 				"line_ending": "Unix"
 			}
 		}
@@ -310,12 +310,19 @@
 		"/private/var/www/interface/app/controllers",
 		"/private/var/www/interface/app/controllers/billing",
 		"/private/var/www/interface/app/controllers/billing/user",
-		"/private/var/www/interface/app/models",
-		"/private/var/www/interface/app/models/billing",
-		"/private/var/www/interface/app/models/billing/user",
-		"/private/var/www/interface/app/models/billing/user/resource",
-		"/private/var/www/interface/app/models/billing/user/resource/base",
-		"/private/var/www/interface/spec",
+		"/private/var/www/interface/app/controllers/billing/user/resource",
+		"/private/var/www/interface/app/permissions",
+		"/private/var/www/interface/app/permissions/permissions_factory",
+		"/private/var/www/interface/app/views",
+		"/private/var/www/interface/app/views/billing",
+		"/private/var/www/interface/app/views/billing/company",
+		"/private/var/www/interface/app/views/billing/company/statistics",
+		"/private/var/www/interface/app/views/billing/company/statistics/vdc_stats",
+		"/private/var/www/interface/app/views/billing/user/deprecated_resources",
+		"/private/var/www/interface/app/views/billing/user/deprecated_resources/forms",
+		"/private/var/www/interface/app/views/billing/user/resource/instance_types",
+		"/private/var/www/interface/app/views/billing/user/resources",
+		"/private/var/www/interface/app/views/billing/user/resources/forms",
 		"/private/var/www/interface/spec/factories",
 		"/private/var/www/interface/spec/factories/billing",
 		"/private/var/www/interface/spec/validators",
@@ -323,21 +330,103 @@
 	],
 	"file_history":
 	[
-		"/private/var/www/interface/spec/controllers/billing/user/deprecated_resources_controller_spec.rb",
-		"/private/var/www/interface/spec/controllers/billing/user/resources_controller_spec.rb",
-		"/private/var/www/interface/app/controllers/billing/company/resources_controller.rb",
+		"/private/var/www/interface/app/controllers/billing/user/deprecated_resources_controller.rb",
+		"/private/var/www/interface/app/controllers/application_controller.rb",
+		"/private/var/www/interface/app/controllers/billing/company/payments_controller.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics.rb",
+		"/private/var/www/interface/app/controllers/billing/company/statistics/vdc_stats_controller.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/vdc_stat.rb",
+		"/private/var/www/interface/app/presenters/billing/company/statistics/vdc_stat_presenter.rb",
+		"/private/var/www/interface/app/models/vdc.rb",
+		"/private/var/www/interface/app/models/billing/user/resource/hypervisor_group.rb",
+		"/private/var/www/interface/app/models/vapp.rb",
+		"/private/var/www/interface/app/models/vcloud/network_interface.rb",
+		"/private/var/www/interface/spec/helpers/application_helper_spec.rb",
+		"/private/var/www/interface/app/views/billing/company/statistics/vdc_stats/_vdc_stat.html.haml",
+		"/private/var/www/interface/app/helpers/application_helper.rb",
+		"/private/var/www/interface/app/models/billing/user/resource/base.rb",
+		"/private/var/www/interface/spec/factories/network_factories.rb",
+		"/private/var/www/interface/app/models/network_interface.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/vdc_reservation_pool_stat.rb",
+		"/private/var/www/interface/config/routes.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/network_interface_stat.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/network_interface_stats/data_sent.rb",
+		"/private/var/www/interface/app/collectors/billing/company/statistics_collector.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/monthly_stat.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/hourly_stat.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/vdc_stats/cpu_allocation.rb",
+		"/private/var/www/interface/app/helpers/currencies_helper.rb",
+		"/private/var/www/interface/app/policies/billing/company/statistics/base_price_policy.rb",
+		"/private/var/www/interface/app/models/billing/company/statistics/calculation_methods.rb",
+		"/private/var/www/interface/app/models/vdc_stat.rb",
+		"/private/var/www/interface/app/policies/billing/company/statistics/vdc_stats/allocation_vapp_price_policy.rb",
+		"/private/var/www/interface/app/policies/billing/company/statistics/base_max_stat_policy.rb",
+		"/private/var/www/interface/app/policies/billing/company/statistics/base_usage_policy.rb",
+		"/private/var/www/interface/spec/models/billing/company/statistics/hourly_stat_spec.rb",
+		"/private/var/www/interface/spec/models/vapp_spec.rb",
+		"/private/var/www/interface/db/migrate/20140717151746_create_vapp_vm_joins.rb",
+		"/private/var/www/interface/app/presenters/billing/user/resource/draas_presenter.rb",
+		"/private/var/www/interface/app/utils/size_utils.rb",
+		"/private/var/www/interface/app/models/statistics/vcloud/vdc_net_hourly_stat.rb",
+		"/private/var/www/interface/db/migrate/20151008111104_create_vdc_stats.rb",
+		"/private/var/www/interface/db/migrate/20151117161129_not_null_values_for_vdc_stats.rb",
+		"/private/var/www/interface/db/schema.rb",
+		"/private/var/www/interface/app/policies/resource_finder.rb",
+		"/private/var/www/interface/app/controllers/vcloud/vdcs_controller.rb",
+		"/private/var/www/interface/app/models/virtual_machine/cdn.rb",
+		"/private/var/www/interface/app/guards/billing/limit_guard/base_strategy.rb",
+		"/private/var/www/interface/app/guards/billing/limit_guard/virtual_machine_acceleration_strategy.rb",
+		"/private/var/www/interface/spec/guards/billing/limit_guard/virtual_machine_acceleration_strategy_spec.rb",
+		"/private/var/www/interface/app/guards/billing/company/limit_guard/base_strategy.rb",
+		"/private/var/www/interface/app/services/user_service/creator.rb",
+		"/private/var/www/interface/app/models/user.rb",
+		"/private/var/www/interface/app/controllers/users_controller.rb",
+		"/private/var/www/interface/lib/on_app/models/base.rb",
 		"/private/var/www/interface/app/validators/immutability_validator.rb",
+		"/private/var/www/interface/app/controllers/billing/user/payments_controller.rb",
+		"/private/var/www/interface/app/responders/billing/plan_responder.rb",
+		"/private/var/www/interface/lib/on_app/responder.rb",
+		"/private/var/www/interface/spec/routing/billing/user/deprecated_resources_spec.rb",
+		"/private/var/www/interface/spec/routing/billing/user/resources_routing_spec.rb",
+		"/private/var/www/interface/app/services/billing/user/resource/proxy.rb",
+		"/private/var/www/interface/app/views/billing/user/deprecated_resources/index.html.haml",
+		"/private/var/www/interface/config/locales/en-billing-models.yml",
+		"/private/var/www/interface/app/views/users/show.html.haml",
+		"/private/var/www/interface/config/locales/en-currency.yml",
+		"/private/var/www/interface/app/helpers/navigation_helper.rb",
+		"/private/var/www/interface/app/views/billing/user/resources/index.html.haml",
+		"/private/var/www/interface/app/helpers/base_resources_helper.rb",
+		"/private/var/www/interface/app/controllers/billing/user/resources_controller.rb",
+		"/private/var/www/interface/app/views/billing/user/resources/resources/_template_group.html.haml",
+		"/private/var/www/interface/app/views/billing/user/resources/forms/_limit.html.haml",
+		"/private/var/www/interface/app/models/billing/user/resource.rb",
+		"/private/var/www/interface/app/models/billing/resource.rb",
+		"/private/var/www/interface/app/views/billing/user/resources/resources/_backup_server_group.html.haml",
+		"/private/var/www/interface/app/controllers/restrictions/resources_controller.rb",
+		"/private/var/www/interface/app/serializers/billing/user/resource/collection_serializer.rb",
+		"/private/var/www/interface/app/assets/javascripts/onapp/virtual_machine/form/set.js.coffee",
+		"/private/var/www/interface/app/views/billing/user/resources/show.html.haml",
+		"/private/var/www/interface/app/controllers/billing/user/plans_controller.rb",
+		"/private/var/www/interface/app/services/billing/plan_filter.rb",
+		"/private/var/www/interface/app/views/billing/user/resources/forms/_base.html.haml",
+		"/private/var/www/interface/app/views/billing/user/deprecated_resources/show.html.haml",
+		"/private/var/www/interface/app/views/restrictions/sets/show.html.haml",
+		"/private/var/www/rails/actionpack/lib/action_dispatch/routing/route_set.rb",
+		"/private/var/www/interface/app/controllers/billing_plans_controller.rb",
+		"/private/var/www/rails/activerecord/lib/active_record/transactions.rb",
+		"/private/var/www/interface/spec/services/billing/user/resource/proxy_spec.rb",
+		"/private/var/www/interface/spec/controllers/billing/user/resources_controller_spec.rb",
+		"/private/var/www/interface/config/environments/development.rb",
+		"/private/var/www/interface/spec/controllers/billing/user/deprecated_resources_controller_spec.rb",
+		"/private/var/www/interface/app/controllers/billing/company/resources_controller.rb",
 		"/private/var/www/interface/spec/controllers/billing/company/resources_controller_spec.rb",
 		"/private/var/www/interface/app/models/billing/user/resource/template_group.rb",
 		"/private/var/www/interface/app/models/billing/company/resource/base.rb",
-		"/private/var/www/interface/app/controllers/billing/user/deprecated_resources_controller.rb",
-		"/private/var/www/interface/app/models/billing/user/resource/base.rb",
 		"/private/var/www/interface/spec/validators/immutability_validator_spec.rb",
 		"/private/var/www/interface/config/locales/en-models.yml",
 		"/private/var/www/interface/spec/validators/not_changable_validator_spec.rb",
 		"/private/var/www/interface/app/validators/not_changeable_validator.rb",
 		"/private/var/www/interface/app/validators/auto_scaling_cpu_validator.rb",
-		"/private/var/www/interface/config/locales/en-billing-models.yml",
 		"/private/var/www/interface/spec/validators/billing/not_changable_validator_spec.rb",
 		"/private/var/www/interface/app/validators/not_changable_validator.rb",
 		"/private/var/www/interface/app/validators/billing/not_changable_validator.rb",
@@ -347,7 +436,6 @@
 		"/private/var/www/interface/config/application.rb",
 		"/private/var/www/interface/app/validators/aws/ec2_instance_ebs_validator.rb",
 		"/private/var/www/interface/app/validators/local_uniqueness_validator.rb",
-		"/private/var/www/interface/app/models/billing/resource.rb",
 		"/private/var/www/interface/spec/support/factory_girl_additions.rb",
 		"/private/var/www/interface/app/models/accelerator.rb",
 		"/private/var/www/interface/spec/models/accelerator_spec.rb",
@@ -359,98 +447,17 @@
 		"/private/var/www/interface/app/utils/ar_utils.rb",
 		"/private/var/www/interface/app/services/billing/year_report.rb",
 		"/private/var/www/interface/app/serializers/billing/user/resource/base_serializer.rb",
-		"/private/var/www/interface/app/controllers/billing/user/plans_controller.rb",
 		"/private/var/www/interface/config/initializers/will_paginate.rb",
-		"/private/var/www/interface/app/controllers/billing/user/resources_controller.rb",
 		"/private/var/www/interface/app/responders/billing/resource_responder.rb",
 		"/private/var/www/interface/app/models/billing/company/resource/vcloud/compute_zone.rb",
 		"/private/var/www/interface/app/controllers/user_groups_controller.rb",
 		"/private/var/www/interface/lib/highcharts/chart.rb",
 		"/private/var/www/interface/app/controllers/virtual_machines_controller.rb",
-		"/private/var/www/interface/config/routes.rb",
 		"/private/var/www/interface/app/controllers/network_interfaces_controller.rb",
 		"/private/var/www/interface/app/models/redis_instant_stat/base.rb",
-		"/private/var/www/interface/app/models/network_interface.rb",
 		"/private/var/www/interface/lib/highcharts/charts/interface_usage.rb",
 		"/private/var/www/interface/app/views/network_interfaces/usage.chart.haml",
-		"/private/var/www/interface/app/models/resource_instant_usage_statistics.rb",
-		"/private/var/www/interface/app/models/net_hourly_stat.rb",
-		"/private/var/www/interface/app/models/network_interface_instant_usage_statistics.rb",
-		"/private/var/www/interface/app/models/vm_hourly_stat_model.rb",
-		"/private/var/www/interface/app/models/user/used_resources.rb",
-		"/private/var/www/interface/app/models/billing/company/plan.rb",
-		"/private/var/www/interface/app/models/billing/payment.rb",
-		"/private/var/www/interface/app/services/billing/plan_filter.rb",
-		"/private/var/www/interface/spec/models/billing/company/statistics/monthly_stat_spec.rb",
-		"/private/var/www/interface/app/models/billing/user/resource/network_group.rb",
-		"/private/var/www/interface/app/models/virtual_machine/auto_scaling.rb",
-		"/private/var/www/interface/app/services/user_group_service/creator.rb",
-		"/private/var/www/interface/db/schema.rb",
-		"/private/var/www/interface/app/guards/billing/limit_guard/virtual_machine_monit_strategy.rb",
-		"/private/var/www/interface/app/guards/billing/limit_guard/network_interface_strategy.rb",
-		"/private/var/www/interface/lib/infrastructure/cluster/database/actions/preprocess.rb",
-		"/private/var/www/interface/spec/collectors/billing/company/statistics_collector_spec.rb",
-		"/private/var/www/interface/spec/models/billing/company/statistics/calculation_methods_spec.rb",
-		"/private/var/www/interface/spec/services/vcloud/params_for_vapp_provision_spec.rb",
-		"/private/var/www/interface/app/assets/javascripts/onapp/billing/resources.js.coffee",
-		"/private/var/www/interface/app/models/billing/company/payment.rb",
-		"/private/var/www/interface/app/models/billing/user/payment.rb",
-		"/private/var/www/interface/app/models/billing/user/plan.rb",
-		"/private/var/www/interface/app/models/billing/plan.rb",
-		"/private/var/www/interface/app/utils/size_utils.rb",
-		"/private/var/www/interface/app/utils/numeric_utils.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/monthly_stat.rb",
-		"/private/var/www/interface/app/collectors/billing/company/statistics_collector.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/hourly_stat.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/subscription.rb",
-		"/private/var/www/interface/spec/models/billing/company/statistics/subscription_spec.rb",
-		"/private/var/www/interface/spec/services/virtual_machine/wizard_builder_spec.rb",
-		"/private/var/www/interface/app/services/virtual_machine/wizard_builder.rb",
-		"/private/var/www/interface/app/models/image_template_base.rb",
-		"/private/var/www/interface/app/services/user_service/creator.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/parent_stat_methods.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/base.rb",
-		"/private/var/www/interface/app/models/user_group.rb",
-		"/private/var/www/interface/spec/factories/billing/company/stat.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/calculation_methods.rb",
-		"/private/var/www/interface/spec/factories/valid_factories.rb",
-		"/private/var/www/interface/spec/factories/user.rb",
-		"/private/var/www/interface/spec/models/billing/company/statistics/hourly_stat_spec.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/vdc_stats/vs_count.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/network_interface_stats/base.rb",
-		"/private/var/www/interface/app/models/user.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/vdc_stat.rb",
-		"/private/var/www/interface/app/models/billing/company/statistics/network_interface_stat.rb",
-		"/private/var/www/interface/app/utils/time_utils.rb",
-		"/private/var/www/interface/app/models/vdc.rb",
-		"/private/var/www/interface/app/services/vcloud/importers/vdcs.rb",
-		"/private/var/www/interface/app/models/vdc_stat.rb",
-		"/private/var/www/interface/app/models/statistics.rb",
-		"/private/var/www/interface/app/models/hypervisor.rb",
-		"/private/var/www/interface/app/views/user_groups/user_group.rabl",
-		"/private/var/www/interface/app/views/billing/company/plans/plan.rabl",
-		"/private/var/www/interface/app/models/user/price_resources.rb",
-		"/private/var/www/interface/app/presenters/user_group_presenter.rb",
-		"/private/var/www/interface/app/policies/billing/payment_policy.rb",
-		"/private/var/www/interface/app/policies/billing/limit_policy.rb",
-		"/private/var/www/interface/spec/controllers/billing/company/plans_controller_spec.rb",
-		"/private/var/www/interface/app/views/billing/company/plans/_plan.html.haml",
-		"/private/var/www/interface/app/views/billing/company/plans/show.rabl",
-		"/private/var/www/interface/config/info_hub.yml",
-		"/private/var/www/interface/spec/guards/billing/limit_guard/network_interface_strategy_spec.rb",
-		"/private/var/www/interface/app/models/billing/user/resource/hypervisor_group.rb",
-		"/private/var/www/interface/app/policies/billing/user/resource/hypervisor_policy.rb",
-		"/private/var/www/interface/app/models/billing/user/resource/data_store_group.rb",
-		"/private/var/www/interface/spec/factories/billing/user/plan.rb",
-		"/private/var/www/interface/app/models/user/available_resources.rb",
-		"/private/var/www/interface/lib/on_app.rb",
-		"/private/var/www/interface/app/services/vcloud/synchronizer/updater.rb",
-		"/private/var/www/interface/app/models/virtual_machine.rb",
-		"/private/var/www/interface/app/serializers/available_resources_serializer.rb",
-		"/private/var/www/interface/app/views/hypervisors/index.html.haml",
-		"/private/var/www/interface/app/policies/server_resources_detector/base_strategy.rb",
-		"/private/var/www/interface/app/views/hypervisors/_hypervisors.html.haml"
+		"/private/var/www/interface/app/models/resource_instant_usage_statistics.rb"
 	],
 	"find":
 	{
@@ -461,6 +468,11 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/private/var/www/interface",
+			"/private/var/www/interface/app/views/users",
+			"/private/var/www/interface",
+			"/private/var/www/interface/app/assets",
+			"/private/var/www/interface/app/views/billing/user/resources",
 			"/private/var/www/interface",
 			"/private/var/www/interface/app/validators",
 			"/private/var/www/interface",
@@ -547,6 +559,87 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"with_flash_message",
+			"delegate",
+			"vapp_vm_joins",
+			"def master_zone",
+			"vcloud_network_interface",
+			"network_interface",
+			"virtual_machine",
+			"safe_link_to",
+			"network_interface_resource_stat_classes",
+			"NETWORK_INTERFACE_RESOURCE_STAT_TYPES",
+			"safe_link_to",
+			"save_link_to",
+			"External Net",
+			"Externalnet",
+			"network_interface_stats",
+			"price_allocation_memory_resources_guaranteed",
+			"stat_type",
+			"vapp_vm_joins",
+			"ALLOCATION_POOL",
+			"AllocationPool",
+			"Billing::Company::Statistics::VdcStat.generate",
+			"memory_used",
+			"0.008",
+			"connect_accelerator",
+			"def connect_acc",
+			"invicdn_resource_remote_id",
+			"def accelerated?",
+			"update_column",
+			"update_attribute(",
+			"update_attribute",
+			"def connect_acc",
+			"before_",
+			"locke",
+			"index_location",
+			"concern",
+			"concerns",
+			"deprec",
+			"additional_billing_resources_routes",
+			":'resources",
+			"use_serr",
+			"MB",
+			"draas",
+			"only: :in",
+			"only: ",
+			"user_billing_plan_base_resources",
+			"menu_profile",
+			"base_res",
+			"base_r",
+			"base_rr",
+			"resources_path",
+			"resource_path",
+			"reso",
+			"resources :user",
+			"base_",
+			"deprecated_resource_data_store_groups",
+			"resource_data_store_groups_path",
+			"resource_data_store_groups_url",
+			"resource_data_store_groups",
+			"user_plan",
+			"deprecated_bi",
+			"deprecated",
+			"billing_resources.call(:'resources')",
+			"billing_resources",
+			"resource_proxy",
+			"resource_type",
+			"resource_class",
+			"resource_proxy",
+			"base_resources",
+			"new_billing_user_plan_resource_backup_server_group",
+			"resource_data_store_groups",
+			"deprecated_res",
+			"resources :users",
+			"resource :users",
+			"billing_resources",
+			"constraints:",
+			"def user_plan",
+			"serialized",
+			"billing_resources",
+			"request_from_billing_plan",
+			"billing_plan",
+			"check_billing_plan_with_user",
 			"unaccess",
 			"anothe",
 			".\n",
@@ -593,88 +686,7 @@
 			"cant_be_chang",
 			"changed",
 			"billing/company/resource",
-			"errors.add",
-			"changed",
-			"change",
-			"except!(",
-			"except",
-			"hypervisor_zone",
-			"compute_zone",
-			"assigns",
-			"target_id",
-			"limits",
-			"params",
-			"request_from_billing_plan'",
-			"updater",
-			"@network_interface",
-			"net_hourly_stats",
-			"ResourceInstantUsageStatistics",
-			"redis_values",
-			"ZEROED_ATTRIBUTES",
-			"for_chart",
-			"usage",
-			"virtual_machines",
-			"network_inter",
-			"chart",
-			"char",
-			"virtual_ma",
-			"chart",
-			"Highcharts::Chart",
-			"check_or_install_monitis_client",
-			"vcloud_data_store_group",
-			"resource_data_store_groups",
-			"enable_autoscale",
-			"enable_autoscale=",
-			"virtual_machines",
-			"virtual_machine",
-			"def used_autoscale",
-			"used_autoscale",
-			"autoscaled.count",
-			"scope :autoscaled",
-			"def autoscaled",
-			"enable_aut",
-			"enable",
-			";module",
-			"permission_headers",
-			"X-Billing-Plan-May-Be-Removed",
-			"draas?",
-			"draas",
-			"private_class_method",
-			"set_logins",
-			"private_class_method",
-			"||\n",
-			"generate_hour",
-			"company.",
-			"hourly_stat",
-			"vcloud_user_group",
-			"'",
-			"vcloud_user_group",
-			"||\n",
-			"monthly_stat",
-			"execute",
-			"beginning_of_month",
-			"current_time",
-			"creation_time",
-			"stat_time",
-			"creation_time",
-			"monthly_stat_class",
-			"time",
-			"billing_plan",
-			"created_at",
-			"AllocationVApp",
-			"identifier",
-			"identi",
-			"monthly_price",
-			"validate",
-			"VDC_STAT_TYPES",
-			"vcloud?",
-			"billing_plan_order",
-			"def total_amount",
-			"def total_price",
-			"monthly_price",
-			"stats",
-			"monthly_price",
-			"monthly_"
+			"errors.add"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -692,73 +704,13 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/private/var/www/interface/spec/factories/billing/resource.rb",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3267,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2585,
-								2605
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/private/var/www/interface/spec/controllers/billing/user/resources_controller_spec.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6623,
-								6623
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2830.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "/private/var/www/interface/app/controllers/billing/user/resources_controller.rb",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 5355,
@@ -768,8 +720,8 @@
 						"selection":
 						[
 							[
-								284,
-								297
+								317,
+								317
 							]
 						],
 						"settings":
@@ -780,99 +732,9 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/private/var/www/interface/app/services/billing/user/resource/proxy.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3134,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1478,
-								1478
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 634.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/private/var/www/interface/spec/services/billing/user/resource/proxy_spec.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4059,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3759,
-								3759
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1200.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/private/var/www/interface/app/models/billing/user/resource/base.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								611,
-								611
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -930,6 +792,274 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"applicat",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"app/models/vapp.rb",
+				"app/models/vapp.rb"
+			],
+			[
+				"vdc.rb",
+				"app/models/vdc.rb"
+			],
+			[
+				"/user/resource/hypervisor_group",
+				"app/models/billing/user/resource/hypervisor_group.rb"
+			],
+			[
+				"vapp",
+				"app/models/vapp.rb"
+			],
+			[
+				"applihelpspec",
+				"spec/helpers/application_helper_spec.rb"
+			],
+			[
+				"vcloudnetint",
+				"app/models/vcloud/network_interface.rb"
+			],
+			[
+				"vcloudnetw",
+				"app/models/vcloud/network_interface.rb"
+			],
+			[
+				"vdcstcont",
+				"app/controllers/billing/company/statistics/vdc_stats_controller.rb"
+			],
+			[
+				"statis",
+				"app/models/billing/company/statistics.rb"
+			],
+			[
+				"datasent",
+				"app/models/billing/company/statistics/network_interface_stats/data_sent.rb"
+			],
+			[
+				"statistisc",
+				"app/models/billing/company/statistics.rb"
+			],
+			[
+				"vdcsta",
+				"app/models/billing/company/statistics/vdc_stat.rb"
+			],
+			[
+				"vdcstat",
+				"app/models/vdc_stat.rb"
+			],
+			[
+				"vdcstatpres",
+				"app/presenters/billing/company/statistics/vdc_stat_presenter.rb"
+			],
+			[
+				"cpuallocation",
+				"app/models/billing/company/statistics/vdc_stats/cpu_allocation.rb"
+			],
+			[
+				"hourlystat",
+				"app/models/billing/company/statistics/hourly_stat.rb"
+			],
+			[
+				"hourlysta",
+				"spec/models/billing/company/statistics/hourly_stat_spec.rb"
+			],
+			[
+				"stavdcreservationpool",
+				"app/models/billing/company/statistics/vdc_reservation_pool_stat.rb"
+			],
+			[
+				"vappspec",
+				"spec/models/vapp_spec.rb"
+			],
+			[
+				"vapp_vm_joins",
+				"db/migrate/20140717151746_create_vapp_vm_joins.rb"
+			],
+			[
+				"modelvapp",
+				"app/models/vapp.rb"
+			],
+			[
+				"vapp_join",
+				"db/migrate/20140717151746_create_vapp_vm_joins.rb"
+			],
+			[
+				"modevdc",
+				"app/models/vdc.rb"
+			],
+			[
+				"odels/billing/company/statistics.rb",
+				"app/models/billing/company/statistics.rb"
+			],
+			[
+				"models/billing/company/statistics.rb",
+				"app/models/billing/company/statistics.rb"
+			],
+			[
+				"collectors/billing/company/statistics_collecto",
+				"app/collectors/billing/company/statistics_collector.rb"
+			],
+			[
+				"compavdcst",
+				"app/models/billing/company/statistics/vdc_stat.rb"
+			],
+			[
+				"compavdcsta",
+				"app/models/billing/company/statistics/vdc_stat.rb"
+			],
+			[
+				"vdcstacont",
+				"app/controllers/billing/company/statistics/vdc_stats_controller.rb"
+			],
+			[
+				"resenters/billing/user/resource/draas_presenter.rb",
+				"interface/app/presenters/billing/user/resource/draas_presenter.rb"
+			],
+			[
+				"migratevdcstat",
+				"interface/db/migrate/20151117161129_not_null_values_for_vdc_stats.rb"
+			],
+			[
+				"migtvdcstat",
+				"interface/db/migrate/20151008111104_create_vdc_stats.rb"
+			],
+			[
+				"vdc_stat",
+				"interface/app/models/vdc_stat.rb"
+			],
+			[
+				"schema.rb",
+				"interface/db/schema.rb"
+			],
+			[
+				"sizeut",
+				"interface/app/utils/size_utils.rb"
+			],
+			[
+				"vdcnethour",
+				"interface/app/models/statistics/vcloud/vdc_net_hourly_stat.rb"
+			],
+			[
+				"contovdc_sta",
+				"interface/app/controllers/billing/company/statistics/vdc_stats_controller.rb"
+			],
+			[
+				"route",
+				"interface/config/routes.rb"
+			],
+			[
+				"virtualmachineaccelerationstrategy",
+				"interface/spec/guards/billing/limit_guard/virtual_machine_acceleration_strategy_spec.rb"
+			],
+			[
+				"usercontr",
+				"interface/app/controllers/users_controller.rb"
+			],
+			[
+				"user.rb",
+				"interface/app/models/user.rb"
+			],
+			[
+				"vdccont",
+				"interface/app/controllers/vcloud/vdcs_controller.rb"
+			],
+			[
+				"routes",
+				"interface/config/routes.rb"
+			],
+			[
+				"spec/routing/billing/user/resources_routing_spec.rb",
+				"interface/spec/routing/billing/user/resources_routing_spec.rb"
+			],
+			[
+				"spec/routing/billing/user/de",
+				"interface/spec/routing/billing/user/deprecated_resources_spec.rb"
+			],
+			[
+				"spec/routing/billing/user/",
+				"interface/spec/routing/billing/user/resources_routing_spec.rb"
+			],
+			[
+				"draaspes",
+				"interface/app/presenters/billing/user/resource/draas_presenter.rb"
+			],
+			[
+				"en-cur",
+				"interface/config/locales/en-currency.yml"
+			],
+			[
+				"draaspre",
+				"interface/app/presenters/billing/user/resource/draas_presenter.rb"
+			],
+			[
+				"en-bill-mod",
+				"interface/config/locales/en-billing-models.yml"
+			],
+			[
+				"pec/routing/billing/user/deprecated_resources_spec.rb",
+				"interface/spec/routing/billing/user/deprecated_resources_spec.rb"
+			],
+			[
+				"outing/billing/user/resources_routing_spec",
+				"interface/spec/routing/billing/user/resources_routing_spec.rb"
+			],
+			[
+				"deprecatedspec",
+				"interface/spec/routing/billing/user/deprecated_resources_spec.rb"
+			],
+			[
+				"userrescont",
+				"interface/app/controllers/billing/user/resources_controller.rb"
+			],
+			[
+				"deprerescon",
+				"interface/app/controllers/billing/user/deprecated_resources_controller.rb"
+			],
+			[
+				"basereshel",
+				"interface/app/helpers/base_resources_helper.rb"
+			],
+			[
+				"billuserrescon",
+				"interface/app/controllers/billing/user/resources_controller.rb"
+			],
+			[
+				"resocont",
+				"interface/app/controllers/restrictions/resources_controller.rb"
+			],
+			[
+				"resources/forms/_limit",
+				"interface/app/views/billing/user/resources/forms/_limit.html.haml"
+			],
+			[
+				"user/resources/forms/_base",
+				"interface/app/views/billing/user/resources/forms/_base.html.haml"
+			],
+			[
+				"billuserplancont",
+				"interface/app/controllers/billing/user/plans_controller.rb"
+			],
+			[
+				"billresshow",
+				"interface/app/views/billing/user/resources/show.html.haml"
+			],
+			[
+				"resshow.ha",
+				"interface/app/views/restrictions/sets/show.html.haml"
+			],
+			[
+				"collectseriz",
+				"interface/app/serializers/billing/user/resource/collection_serializer.rb"
+			],
+			[
+				"routs",
+				"rails/actionpack/lib/action_dispatch/routing/route_set.rb"
+			],
+			[
+				"deprecate_c",
+				"interface/app/controllers/billing/user/deprecated_resources_controller.rb"
+			],
 			[
 				"controllers/billing/user/resources_controller_spec",
 				"interface/spec/controllers/billing/user/resources_controller_spec.rb"
@@ -1011,10 +1141,6 @@
 				"spec/models/billing/company/resource/base_spec.rb"
 			],
 			[
-				"en-bill-mod",
-				"config/locales/en-billing-models.yml"
-			],
-			[
 				"bilcompresocontspe",
 				"spec/controllers/billing/company/resources_controller_spec.rb"
 			],
@@ -1093,10 +1219,6 @@
 			[
 				"virtualmacontr",
 				"app/controllers/virtual_machines_controller.rb"
-			],
-			[
-				"route",
-				"config/routes.rb"
 			],
 			[
 				"insterface_usa",
@@ -1181,266 +1303,6 @@
 			[
 				"tistics/monthly_stat.rb",
 				"app/models/billing/company/statistics/monthly_stat.rb"
-			],
-			[
-				"statistics/monthly_stat_spec.rb",
-				"spec/models/billing/company/statistics/monthly_stat_spec.rb"
-			],
-			[
-				"modeuser_grop",
-				"app/models/user_group.rb"
-			],
-			[
-				"billicompstabase",
-				"app/models/billing/company/statistics/base.rb"
-			],
-			[
-				"calculat",
-				"app/models/billing/company/statistics/calculation_methods.rb"
-			],
-			[
-				"parenmethods",
-				"app/models/billing/company/statistics/parent_stat_methods.rb"
-			],
-			[
-				"modelbillpla.rb",
-				"app/models/billing/plan.rb"
-			],
-			[
-				"billuserpla.rb",
-				"app/models/billing/user/plan.rb"
-			],
-			[
-				"monthlystaspe",
-				"spec/models/billing/company/statistics/monthly_stat_spec.rb"
-			],
-			[
-				"modelbillcompanstatvc",
-				"app/models/billing/company/statistics/vdc_stats/vs_count.rb"
-			],
-			[
-				"monthlysta",
-				"app/models/billing/company/statistics/monthly_stat.rb"
-			],
-			[
-				"hourstatspec",
-				"spec/models/billing/company/statistics/hourly_stat_spec.rb"
-			],
-			[
-				"hourlystatspec",
-				"spec/models/billing/company/statistics/hourly_stat_spec.rb"
-			],
-			[
-				"statcollspec",
-				"spec/collectors/billing/company/statistics_collector_spec.rb"
-			],
-			[
-				"modelusergroup",
-				"app/models/user_group.rb"
-			],
-			[
-				"billcomparescom",
-				"app/models/billing/company/resource/vcloud/compute_zone.rb"
-			],
-			[
-				"bilcompresbasec",
-				"spec/models/billing/company/resource/base_spec.rb"
-			],
-			[
-				"billingcompanyrebae",
-				"app/models/billing/company/resource/base.rb"
-			],
-			[
-				"billingcomapnyresbas",
-				"app/models/billing/company/resource/base.rb"
-			],
-			[
-				"modelvdc",
-				"app/models/vdc.rb"
-			],
-			[
-				"routes.rb",
-				"config/routes.rb"
-			],
-			[
-				"vdcs",
-				"app/services/vcloud/importers/vdcs.rb"
-			],
-			[
-				"billinguserplan",
-				"app/models/billing/user/plan.rb"
-			],
-			[
-				"billcompapla.rb",
-				"app/models/billing/company/plan.rb"
-			],
-			[
-				"vdcsta",
-				"app/models/vdc_stat.rb"
-			],
-			[
-				"hyper",
-				"app/models/hypervisor.rb"
-			],
-			[
-				"user_grou",
-				"app/views/user_groups/user_group.rabl"
-			],
-			[
-				"staticolles",
-				"spec/collectors/billing/company/statistics_collector_spec.rb"
-			],
-			[
-				"statiscolle",
-				"app/collectors/billing/company/statistics_collector.rb"
-			],
-			[
-				"statcolel",
-				"app/collectors/billing/company/statistics_collector.rb"
-			],
-			[
-				"app/views/billing/company/plans/plan.rabl",
-				"app/views/billing/company/plans/plan.rabl"
-			],
-			[
-				"user_gro",
-				"app/models/user_group.rb"
-			],
-			[
-				"user.rb",
-				"app/models/user.rb"
-			],
-			[
-				"infohub",
-				"config/info_hub.yml"
-			],
-			[
-				"network_interface",
-				"spec/guards/billing/limit_guard/network_interface_strategy_spec.rb"
-			],
-			[
-				"billuserplan",
-				"app/models/billing/user/plan.rb"
-			],
-			[
-				"billuserreshyper",
-				"app/models/billing/user/resource/hypervisor_group.rb"
-			],
-			[
-				"billuserresdata",
-				"app/models/billing/user/resource/data_store_group.rb"
-			],
-			[
-				"billuserreshype",
-				"app/models/billing/user/resource/hypervisor_group.rb"
-			],
-			[
-				"ervices/virtual_machine/wizard_builder",
-				"spec/services/virtual_machine/wizard_builder_spec.rb"
-			],
-			[
-				"app/services/vcloud/synchronizer/updater.rb",
-				"app/services/vcloud/synchronizer/updater.rb"
-			],
-			[
-				"limit_guardnetwork_interface_strategy_spec.r",
-				"spec/guards/billing/limit_guard/network_interface_strategy_spec.rb"
-			],
-			[
-				"network_interface_strategy_spec.",
-				"spec/guards/billing/limit_guard/network_interface_strategy_spec.rb"
-			],
-			[
-				"hyperhyperham",
-				"app/views/hypervisors/_hypervisors.html.haml"
-			],
-			[
-				"hypervisorsindex",
-				"app/views/hypervisors/index.html.haml"
-			],
-			[
-				"app/guards/billing/limit_guard/instance_type_strategy.rb",
-				"app/guards/billing/limit_guard/instance_type_strategy.rb"
-			],
-			[
-				"instanc_type.rb",
-				"app/models/instance_type.rb"
-			],
-			[
-				"billinguserpla",
-				"app/models/billing/user/plan.rb"
-			],
-			[
-				"resourcnetw",
-				"app/models/billing/user/resource/network_group.rb"
-			],
-			[
-				"instanc_type_stra",
-				"app/guards/billing/limit_guard/instance_type_strategy.rb"
-			],
-			[
-				"netwstra",
-				"app/guards/billing/limit_guard/network_interface_strategy.rb"
-			],
-			[
-				"gemfile",
-				"Gemfile"
-			],
-			[
-				"instance_type",
-				"app/guards/billing/limit_guard/instance_type_strategy.rb"
-			],
-			[
-				"virtua",
-				"app/models/virtual_machine.rb"
-			],
-			[
-				"spec/controllers/billing/company/resources_controller_spec.rb",
-				"spec/controllers/billing/company/resources_controller_spec.rb"
-			],
-			[
-				"billuserdeprresconspe",
-				"spec/controllers/billing/user/deprecated_resources_controller_spec.rb"
-			],
-			[
-				"billinguserrescontspec",
-				"spec/controllers/billing/user/resources_controller_spec.rb"
-			],
-			[
-				"billinguserresrabl",
-				"app/views/billing/user/deprecated_resources/resource.rabl"
-			],
-			[
-				"billincomapnresorabl",
-				"app/views/billing/company/resources/resource.rabl"
-			],
-			[
-				"spec/calculators/billing/price_calculation/vm_wizard_spec.rb",
-				"spec/calculators/billing/price_calculation/vm_wizard_spec.rb"
-			],
-			[
-				"vm_auto",
-				"lib/on_app/vm_auto_scale_manager.rb"
-			],
-			[
-				"factor",
-				"app/permissions/factories.rb"
-			],
-			[
-				"billuserrescon",
-				"app/controllers/billing/user/resources_controller.rb"
-			],
-			[
-				"comparescon",
-				"app/controllers/billing/company/resources_controller.rb"
-			],
-			[
-				"rescontr",
-				"app/controllers/billing/company/resources_controller.rb"
-			],
-			[
-				"companyresindex",
-				"app/views/billing/company/resources/index.rabl"
 			]
 		],
 		"width": 0.0
